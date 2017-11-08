@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">VR_Fantasy</string>
     <string name="title_activity_maps">Map</string>
+    
+    // loading
+    <string name="error">Error</string>
+    <string name="reload">Refresh</string>
 </resources>

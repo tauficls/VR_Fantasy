@@ -11,12 +11,15 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
+import com.taufic.vr_fantasy.BaseApi.ApiClass.DataResponse;
+import com.taufic.vr_fantasy.Utils.VolleySingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -177,7 +180,6 @@ public class BaseApi<T> {
             apiListener.onApiError(new VolleyError(exception.getMessage()));
         }
     }
-
 
     public void onApiError(VolleyError error, ApiListener apiListener) {
         apiListener.onApiError(error);

@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.taufic.vr_fantasy.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by taufic on 11/8/2017.
@@ -18,18 +20,17 @@ import com.taufic.vr_fantasy.R;
 
 public class ProgressView extends LinearLayout {
 
-    private ViewGroup mLoadingContainer;
-    private TextView mErrorLoadingMsg;
-    private Button mRetryButton;
+    @BindView(R.id.loading_indicator)
+    ViewGroup mLoadingContainer;
+    @BindView(R.id.error_text)
+    TextView mErrorLoadingMsg;
+    @BindView(R.id.retry_button)
+    Button mRetryButton;
 
     public ProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         View view = LayoutInflater.from(context).inflate(R.layout.view_progressbar, null);
-
-        mLoadingContainer = (RelativeLayout) view.findViewById(R.id.loading_container);
-        mErrorLoadingMsg = (TextView) view.findViewById(R.id.error_text);
-        mRetryButton = (Button) view.findViewById(R.id.retry_button);
+        ButterKnife.bind(this, view);
 
         addView(view);
     }

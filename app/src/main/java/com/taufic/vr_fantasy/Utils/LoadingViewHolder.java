@@ -1,5 +1,6 @@
 package com.taufic.vr_fantasy.Utils;
 
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
