@@ -3,6 +3,24 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\c2b493ad152c99fbcf0811d13744f007446db8dd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_cac9748aea3867ed3f7ea56a9990f5034bc344aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\d55b7dd9823c5bdd569326878bece6db460db6c2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_65fd2ed631d7e9f1a8f3d5657635342a1af7465f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\user\.android\build-cache\41a36f538e8c2a33f8dc99cfbeb8ff6863e4d255\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,12 +30,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\5bdf184c7c2e1060ad33ef489b292cdf6b44ad67\output\jars\classes.jar"
+        jar="C:\Users\user\.android\build-cache\8c0a204997b48e063f8e42421416fba76f4ba1ba\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
-        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_830fdb8006e4cf852bcc7abcee10de8a0ea7bdc8.jar" />
+        sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_b00e0c465efe3d5d5bf8a32e07720bf0b3d58255.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,24 +84,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\08551bf53438c02e0085a129472f1d1ce00b50e8\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
-        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_1bf78b8401f0b9820f1938daa7770d395fcb39f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\054d056f34117e45989c78f9b24b5d79a2c17642\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
-        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_536e76d9a0072b4fc8080d98d39ad4f27ced654b.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\user\.android\build-cache\47c2a991dfc4114a8d5ecfe1d71fdd3963aca481\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -102,12 +102,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\414e4a0a15f42f494def323063a13d2c2f960baa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_7560fe28c706e8b6fa5dbd0c420c5b5b4d49f108.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\6b197622cd5575a81aefb31de254708c4d9f64e9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="94fca868854457ede6df15c902938468c71d579e">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_a0b5c85510b0ad18716b314e6b04a88a5c90f617.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\de632a99bb85954640d325dae8abde5558d6f7ee\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_c7804eb911a7ef9fb176665a36202c47752efef7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\user\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
         sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
         <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_5548ccada9aa534b99e5bae3d17100e81aae0ecf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\1cff6a5834d0a9832a516fdd3a28b94546c9f75d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_c488ccec966ae7e87642985de29b2a1aff8693f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\af9afe8f3763dacab3adeaa201abe6d946971d47\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_1d77b5ad11abf41c7ff6d433b76d5efc5d456609.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,12 +183,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\ce0181267e754e864da3898129ed0d6950b2d86e\output\jars\classes.jar"
+        jar="C:\Users\user\.android\build-cache\e19da52ba5ceb44d55b3b80e479103485d75de91\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
-        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_6ef3f16ec979faeac193713bd3a0e522dde4dc99.jar" />
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_d79ad7c0cee7b85e973b0d9fa55a95eebc53fe47.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\30fc46d136c12940cb65a51ff4a2d423e80d4b51\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_d775e79abf81dec8568657a805ebd952cc8cb435.jar" />
     </item>
     <item
         is-multidex="false"

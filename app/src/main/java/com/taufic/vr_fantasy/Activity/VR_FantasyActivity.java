@@ -1,5 +1,6 @@
 package com.taufic.vr_fantasy.Activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,12 +11,19 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.taufic.vr_fantasy.BaseApi.ApiClass.Destination;
 import com.taufic.vr_fantasy.R;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,21 +40,62 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     SupportMapFragment mMapFragment;
 
     private GoogleMap googleMap;
+    private Activity mActivity;
+    ArrayList<Destination> destinationList;
+
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference destination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vr__fantasy);
+        setContentView(R.layout.activity_vr_fantasy);
+
+
         ButterKnife.bind(this);
         initializeView();
+        mActivity = this;
 
         mMapFragment = SupportMapFragment.newInstance();
         mMapFragment.getMapAsync(this);
 
+        destinationList = new ArrayList<>();
+        destination = database.getReference("Destination");
+        retrieveData();
+
     }
 
     private void retrieveData() {
+        System.out.println(destination.child("LouisKienne").getKey());
+        destination.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
+//                System.out.println("The " + dataSnapshot.getKey() + " score is " + dataSnapshot.getValue());
+                Destination destination = dataSnapshot.getValue(Destination.class);
+                destinationList.add(destination);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void initializeView() {
@@ -85,7 +134,7 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     private Marker createMarker(double latitude, double longitude, String title, int iconResID) {
         return googleMap.addMarker(new MarkerOptions()
-            .position(new LatLng(new LatLng(latitude, longitude)))
+            .position(new LatLng(latitude, longitude))
             .anchor(0.5f, 0.5f)
             .title(title)
             .icon(BitmapDescriptorFactory.fromResource(iconResID)));

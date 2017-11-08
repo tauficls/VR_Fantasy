@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "103533334117-9igmngg5i08up4527q6ajubd1jc7ti69.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taufic.vr_fantasy",
+            "certificate_hash": "53edec09c4c0345d09a7fb21ef139c27a201a648"
+          }
+        },
+        {
           "client_id": "103533334117-6fss14co9ma6d4o32snnodlc6nmo258m.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103533334117-6fss14co9ma6d4o32snnodlc6nmo258m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

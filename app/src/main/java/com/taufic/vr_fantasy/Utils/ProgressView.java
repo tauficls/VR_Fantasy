@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 
 public class ProgressView extends LinearLayout {
 
-    @BindView(R.id.loading_indicator)
+    @BindView(R.id.loading_container)
     ViewGroup mLoadingContainer;
     @BindView(R.id.error_text)
     TextView mErrorLoadingMsg;
