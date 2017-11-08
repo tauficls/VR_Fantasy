@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "103533334117",
+    "firebase_url": "https://galery-vral-fantasy.firebaseio.com",
+    "project_id": "galery-vral-fantasy",
+    "storage_bucket": "galery-vral-fantasy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103533334117:android:be254c431ad7837f",
+        "android_client_info": {
+          "package_name": "com.taufic.vr_fantasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103533334117-6fss14co9ma6d4o32snnodlc6nmo258m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPDXc5xhCHBKBG2Q6SmU3eyNALOaTRUas"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
