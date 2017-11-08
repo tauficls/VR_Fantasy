@@ -1,8 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VR_Fantasy</string>
     <string name="title_activity_maps">Map</string>
-    
-    // loading
+
+    <!-- label title -->
+    <string name="Home">Home</string>
+    <string name="Detail">Detail</string>
+    <!-- loading -->
     <string name="error">Error</string>
     <string name="reload">Refresh</string>
+
+
 </resources>

@@ -10,7 +10,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.taufic.vr_fantasy.R;
 
@@ -28,7 +31,7 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     SupportMapFragment mMapFragment;
 
-    private GoogleMap mMap;
+    private GoogleMap googleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +45,50 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     }
 
+    private void retrieveData() {
+
+    }
+
     private void initializeView() {
         mDetailContainer.setVisibility(View.GONE);
+        mWebViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToWeb();
+            }
+        });
+        mDetailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoDetail();
+            }
+        });
+    }
+
+    private void goToWeb() {
+
+    }
+
+    private void gotoDetail() {
+
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+        googleMap = googleMap;
 
         // Add a marker in Sydney, Australia, and move the camera.
         LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    private Marker createMarker(double latitude, double longitude, String title, int iconResID) {
+        return googleMap.addMarker(new MarkerOptions()
+            .position(new LatLng(new LatLng(latitude, longitude)))
+            .anchor(0.5f, 0.5f)
+            .title(title)
+            .icon(BitmapDescriptorFactory.fromResource(iconResID)));
     }
 
 }

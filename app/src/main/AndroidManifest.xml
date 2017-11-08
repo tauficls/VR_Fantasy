@@ -9,20 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-                   android:value="@string/google_maps_key"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
 
-        <activity android:name=".Activity.VR_FantasyActivity">
+        <activity android:name=".Activity.VR_FantasyActivity"
+            android:label="@string/Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.DetailActivity"
+            android:label="@string/Detail">
+        </activity>
     </application>
 
 </manifest>
-
