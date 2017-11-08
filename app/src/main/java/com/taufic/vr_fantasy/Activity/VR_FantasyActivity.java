@@ -3,6 +3,7 @@ package com.taufic.vr_fantasy.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -20,7 +21,10 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     @BindView(R.id.detail_container)
     LinearLayout mDetailContainer;
-    @BindView(R.id.)
+    @BindView(R.id.view_detail)
+    Button mDetailButton;
+    @BindView(R.id.view_web)
+    Button mWebViewButton;
 
     SupportMapFragment mMapFragment;
 
