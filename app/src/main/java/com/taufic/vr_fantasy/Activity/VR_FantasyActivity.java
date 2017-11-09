@@ -46,34 +46,38 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference destination;
 
+
+    private boolean isDataReady = false;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vr_fantasy);
-
-
         ButterKnife.bind(this);
         initializeView();
         mActivity = this;
 
-        mMapFragment = SupportMapFragment.newInstance();
+        mMapFragment = (SupportMapFragment) getSupportFragmentManager()
+            .findFragmentById(R.id.map);
         mMapFragment.getMapAsync(this);
 
         destinationList = new ArrayList<>();
         destination = database.getReference("Destination");
-        retrieveData();
 
     }
 
     private void retrieveData() {
-        System.out.println(destination.child("LouisKienne").getKey());
         destination.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
-//                System.out.println("The " + dataSnapshot.getKey() + " score is " + dataSnapshot.getValue());
                 Destination destination = dataSnapshot.getValue(Destination.class);
                 destinationList.add(destination);
+                System.out.println("lat " + destination.getLatitude() + "long" + destination.getLongitude());
+                // Create marker when map is ready
+                createMarker(destination.getLatitude(), destination.getLongitude(), destination.getName(), 0);
+                LatLng now = new LatLng(destination.getLatitude(), destination.getLongitude());
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(now));
             }
 
             @Override
@@ -112,6 +116,7 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
                 gotoDetail();
             }
         });
+
     }
 
     private void goToWeb() {
@@ -123,13 +128,14 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-        googleMap = googleMap;
+    public void onMapReady(GoogleMap map) {
+        googleMap = map;
+//
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        retrieveData();
 
-        // Add a marker in Sydney, Australia, and move the camera.
-        LatLng sydney = new LatLng(-34, 151);
-        googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Add a marker in Sydney and move the camera
+
     }
 
     private Marker createMarker(double latitude, double longitude, String title, int iconResID) {
@@ -137,7 +143,7 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
             .position(new LatLng(latitude, longitude))
             .anchor(0.5f, 0.5f)
             .title(title)
-            .icon(BitmapDescriptorFactory.fromResource(iconResID)));
+            .icon(BitmapDescriptorFactory.defaultMarker()));
     }
 
 }
