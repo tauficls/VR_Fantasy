@@ -73,7 +73,7 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Destination destination = dataSnapshot.getValue(Destination.class);
                 destinationList.add(destination);
-                System.out.println("lat " + destination.getLatitude() + "long" + destination.getLongitude());
+                
                 // Create marker when map is ready
                 createMarker(destination.getLatitude(), destination.getLongitude(), destination.getName(), 0);
                 LatLng now = new LatLng(destination.getLatitude(), destination.getLongitude());
