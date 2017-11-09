@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -36,7 +37,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyCallback {
     @BindView(R.id.detail_container)
     LinearLayout mDetailContainer;
     @BindView(R.id.view_detail)
@@ -48,8 +49,9 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     private GoogleMap googleMap;
     private Activity mActivity;
-    ArrayList<Destination> destinationList;
-    Destination dest;
+    private ArrayList<Destination> destinationList;
+    private Destination dest;
+    private int position = 0;
 
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference destination;
@@ -92,6 +94,20 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
                 // Create marker when map is ready
                 createMarker(destination.getLatitude(), destination.getLongitude(), destination.getName(), 0);
+                googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(Marker marker) {
+                        Toast.makeText(mActivity, "Marker Clicked", Toast.LENGTH_SHORT).show();
+                        mDetailContainer.setVisibility(View.VISIBLE);
+                        for (Destination data : destinationList) {
+                            if(data.getName().equals(marker.getTitle())) {
+                                dest = data;
+                                break;
+                            }
+                        }
+                        return true;
+                    }
+                });
             }
 
             @Override
@@ -134,12 +150,13 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     }
 
     private void goToWeb() {
-        Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(dest.link));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + dest.link));;
         startActivity(intent);
     }
 
     private void gotoDetail() {
         
+
     }
 
     private void initCamera(Location location) {
@@ -178,7 +195,8 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
             }
         });
 
-        googleMap.setOnMarkerClickListener(this);
+
+
     }
 
     private Marker createMarker(double latitude, double longitude, String title, int iconID) {
@@ -189,15 +207,4 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
             .icon(BitmapDescriptorFactory.defaultMarker()));
     }
 
-    @Override
-    public boolean onMarkerClick(Marker marker) {
-        mDetailContainer.setVisibility(View.VISIBLE);
-        for (Destination data : destinationList) {
-            if(data.getName().equals(marker.getTitle())) {
-                dest = data;
-                break;
-            }
-        }
-        return false;
-    }
 }
