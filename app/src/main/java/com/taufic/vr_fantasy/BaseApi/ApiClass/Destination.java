@@ -1,30 +1,40 @@
 package com.taufic.vr_fantasy.BaseApi.ApiClass;
 
+import java.io.Serializable;
+
 /**
  * Created by taufic on 11/8/2017.
  */
 
-public class Destination {
+public class Destination implements Serializable {
     public String address;
     public String booking;
     public String image;
     public String link;
     public String name;
+    public String description;
     public Double longitude;
     public Double latitude;
+    public String type;
 
     public Destination() {
 
     }
 
-    public Destination(String address, String booking, String image, String link, String name, Double longitude, Double latitude) {
-        this.address = address;
-        this.booking = booking;
-        this.image = image;
-        this.link = link;
-        this.name = name;
-        this.longitude = longitude;
-        this.latitude = latitude;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getAddress() {

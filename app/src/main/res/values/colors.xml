@@ -6,4 +6,6 @@
 
     <!-- color -->
     <color name="white">#FFFFFF</color>
+    <color name="green_cyan">#1DE9B6</color>
+
 </resources>

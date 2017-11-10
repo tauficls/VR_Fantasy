@@ -2,17 +2,17 @@ package com.taufic.vr_fantasy.Activity;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,10 +40,10 @@ import butterknife.ButterKnife;
 public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyCallback {
     @BindView(R.id.detail_container)
     LinearLayout mDetailContainer;
+    @BindView(R.id.search_query)
+    EditText mSearch;
     @BindView(R.id.view_detail)
     Button mDetailButton;
-    @BindView(R.id.view_web)
-    Button mWebViewButton;
 
     SupportMapFragment mMapFragment;
 
@@ -56,6 +56,13 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference destination;
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +71,10 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
         initializeView();
         mActivity = this;
 
+
+        getSupportActionBar().setDisplayOptions(
+            ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_action_bar);
         mMapFragment = (SupportMapFragment) getSupportFragmentManager()
             .findFragmentById(R.id.map);
         mMapFragment.getMapAsync(this);
@@ -97,7 +108,6 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
                 googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                     @Override
                     public boolean onMarkerClick(Marker marker) {
-                        Toast.makeText(mActivity, "Marker Clicked", Toast.LENGTH_SHORT).show();
                         mDetailContainer.setVisibility(View.VISIBLE);
                         for (Destination data : destinationList) {
                             if(data.getName().equals(marker.getTitle())) {
@@ -134,12 +144,6 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     private void initializeView() {
         mDetailContainer.setVisibility(View.GONE);
-        mWebViewButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToWeb();
-            }
-        });
         mDetailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,14 +153,9 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
 
     }
 
-    private void goToWeb() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + dest.link));;
-        startActivity(intent);
-    }
 
     private void gotoDetail() {
-        
-
+        DetailActivity.startThisActivitiy(mActivity, dest);
     }
 
     private void initCamera(Location location) {
@@ -186,7 +185,6 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     public void onMapReady(GoogleMap map) {
         googleMap = map;
 
-        retrieveData();
         GoogleMapApi.myLocation(mActivity, new GoogleMapApi.GoogleLocationCallBack() {
             @Override
             public void OnSuccess(Location location) {

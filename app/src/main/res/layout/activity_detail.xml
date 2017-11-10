@@ -5,12 +5,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.taufic.vr_fantasy.Activity.DetailActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/_0dp"
+        android:layout_weight="1">
 
-    </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Name"
+                android:textSize="@dimen/f_24sp"
+                android:padding="@dimen/_5dp"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Apartemen"
+                android:textSize="@dimen/f_18sp"
+                android:textColor="@color/white"
+                android:background="@color/green_cyan"
+                android:padding="@dimen/_5dp"
+                android:layout_marginLeft="@dimen/_5dp"/>
+
+            <TextView
+                android:id="@+id/place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Jl. Setia Budi No. 10, Bandung"
+                android:textSize="@dimen/f_18sp"
+                android:padding="@dimen/_5dp"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="description"
+                android:textSize="@dimen/f_16sp"
+                android:padding="@dimen/_5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5dp">
+
+        <Button
+            android:id="@+id/see_AR_button"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View AR"/>
+
+        <View
+            android:layout_width="@dimen/_5dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/booking_button"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Booking"/>
+
+    </LinearLayout>
 
 </LinearLayout>

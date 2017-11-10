@@ -39,6 +39,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\gifdecoder\4.0.0\47c487cc4e64e6ab127a517669ca9a7b49f8c61d\gifdecoder-4.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47c487cc4e64e6ab127a517669ca9a7b49f8c61d">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\gifdecoder-4.0.0_5bc81fcb930591074f490fce7cdbfa3cdcf5f550.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\annotations\4.0.0\f80192e6fd828d41c7da6f3552b0bef5d89cb26e\annotations-4.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f80192e6fd828d41c7da6f3552b0bef5d89cb26e">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\annotations-4.0.0_ad6a700f718d86536e9e4c2c18ebdf47d6b8dcb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\user\.android\build-cache\eb280c0b1b426baff1be5f5ced7657f31ae7d1a4\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -93,6 +111,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\4.0.0\dff931af436f0a2815d0109ab2258bbce2d6275d\glide-4.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="dff931af436f0a2815d0109ab2258bbce2d6275d">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\glide-4.0.0_9bbbe039c32a6e9fffdde99557da96ff5660d48e.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\user\.android\build-cache\53002639473a7ba04d215ac295ae5c0806be67d9\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -129,6 +156,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\gson-2.7_026658e7d34d00d2914c79312e3528e2bb459332.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\user\.android\build-cache\47c2a991dfc4114a8d5ecfe1d71fdd3963aca481\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -144,6 +180,15 @@
         revision="26.0.0"
         sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
         <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_db503c4112e0af24fdc7252b80db2f86643cd5fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\disklrucache\4.0.0\d88059003509074dd59fa226c822724bcf5ec0ca\disklrucache-4.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d88059003509074dd59fa226c822724bcf5ec0ca">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\disklrucache-4.0.0_aa4b5b891d74f204dab99758febaa9ed19461758.jar" />
     </item>
     <item
         is-multidex="false"
@@ -171,6 +216,15 @@
         revision="26.0.0"
         sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
         <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_5548ccada9aa534b99e5bae3d17100e81aae0ecf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\7393fd426425bcaf3b1f0a4e8bfa15b50ec0a1b6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3a1bac2cc31df44dbf1f9bbf2c675319503c9271">
+        <dex dex="E:\Taufic\UpikiTeam\VR_Fantasy\app\build\intermediates\pre-dexed\debug\classes_14144ce197f734841889e7dd96df934f08b979b5.jar" />
     </item>
     <item
         is-multidex="false"
