@@ -49,8 +49,9 @@ public class DetailActivity extends AppCompatActivity {
             mName.setText(destination.getName());
             mPlace.setText(destination.getAddress());
             mDescription.setText(destination.getDescription());
-            Glide.with(this).load("http://goo.gl/gEgYUd").
-                into(mImage);
+            Glide.with(this)
+                .load(destination.getImage())
+                .into(mImage);
             mType.setText(destination.getType());
 //            mType.setBackgroundColor(destination.type);
         }

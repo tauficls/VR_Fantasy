@@ -71,10 +71,10 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
         initializeView();
         mActivity = this;
 
-
         getSupportActionBar().setDisplayOptions(
             ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.custom_action_bar);
+
         mMapFragment = (SupportMapFragment) getSupportFragmentManager()
             .findFragmentById(R.id.map);
         mMapFragment.getMapAsync(this);
@@ -185,6 +185,8 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
     public void onMapReady(GoogleMap map) {
         googleMap = map;
 
+        retrieveData();
+
         GoogleMapApi.myLocation(mActivity, new GoogleMapApi.GoogleLocationCallBack() {
             @Override
             public void OnSuccess(Location location) {
@@ -192,9 +194,6 @@ public class VR_FantasyActivity extends AppCompatActivity implements OnMapReadyC
                 initCamera(location);
             }
         });
-
-
-
     }
 
     private Marker createMarker(double latitude, double longitude, String title, int iconID) {
